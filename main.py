@@ -11,7 +11,8 @@ screensize = (1280, 720)
 fenetre = pygame.display.set_mode(screensize, RESIZABLE)
 
 fond = pygame.image.load("fond.jpg").convert_alpha()
-white = Color(0,0,0)
+white = Color(255,255,255)
+
 def text_objects(text, font):
     textSurface = font.render(text, True, white)
     return textSurface, textSurface.get_rect()
@@ -34,7 +35,7 @@ while continuer :
 
 
     fenetre.blit(fond, (0,0))
-    message_display("wesh les gens", 50, 50)
+    message_display("wesh les gens", 250, 250)
 
 
     pygame.time.Clock().tick(120)
