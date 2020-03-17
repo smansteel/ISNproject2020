@@ -4,8 +4,9 @@ import time
 import random
 from pygame.locals import *
 
+i=200
 pygame.init()
-
+mots = {''}
 pygame.key.set_repeat(100, 25)
 continuer = True
 screensize = (1280, 720)
@@ -28,6 +29,7 @@ def message_display(text,a,b):
 
 
 while continuer :
+    if i== 200 :
 
     for event in pygame.event.get():
         if event.type == QUIT:
@@ -35,11 +37,7 @@ while continuer :
             quit()
 
     fenetre.blit(fond, (0,0))
-
-
-    for i in (0, screensize[1]):
-        message_display("salut",random.randint(20, screensize[0]), 10 )
-        time.sleep(0.5)
+    message_display("salut",random.randint(20, screensize[0]), 10 )
 
 
     pygame.time.Clock().tick(120)
