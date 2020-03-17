@@ -1,6 +1,7 @@
 import pygame
 import keyboard
 import time
+import random
 from pygame.locals import *
 
 pygame.init()
@@ -33,10 +34,11 @@ while continuer :
             continuer = False
             quit()
 
-
-
     fenetre.blit(fond, (0,0))
-    message_display("wesh les gens", 250, 250)
+
+
+    for i in (0, screensize[1]):
+        message_display("salut",random.randint(0, screensize[0]), 0 )
 
 
     pygame.time.Clock().tick(120)
