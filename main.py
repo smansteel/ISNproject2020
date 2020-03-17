@@ -1,6 +1,7 @@
 import pygame
 import keyboard
 import time
+import codecs
 import random
 from pygame.locals import *
 
@@ -29,9 +30,9 @@ def message_display(text,a,b):
     fenetre.blit(TextSurf, TextRect)
 
 
-'''with open("words.txt", "r") as words:
+with codecs.open("words.txt", "r", encoding = "utf-8") as words:
     for mots in words:
-        mot = "".join(mots.split("\n"))
+        mot = mots.split("\n")
         liste_mot += mot
 
 print(liste_mot)'''
