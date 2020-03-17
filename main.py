@@ -29,12 +29,12 @@ def message_display(text,a,b):
     fenetre.blit(TextSurf, TextRect)
 
 
-with open("words.txt", "r") as words:
+'''with open("words.txt", "r") as words:
     for mots in words:
         mot = "".join(mots.split("\n"))
         liste_mot += mot
 
-print(liste_mot)
+print(liste_mot)'''
 while continuer :
 
     for event in pygame.event.get():
@@ -48,11 +48,11 @@ while continuer :
         key_name = pygame.key.name(event.key)
         if pygame.key.get_focused() == True :
             if event.type == pygame.KEYDOWN:
-                print('{}'.format(key_name))
+                message_display('{}'.format(key_name), 10, 20)
 
 
 
-    pygame.time.Clock().tick(120)
+    pygame.time.Clock().tick(60)
     pygame.display.update()
 
 
