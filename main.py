@@ -38,7 +38,8 @@ while continuer :
 
 
     for i in (0, screensize[1]):
-        message_display("salut",random.randint(0, screensize[0]), 0 )
+        message_display("salut",random.randint(20, screensize[0]), 10 )
+        time.sleep(0.5)
 
 
     pygame.time.Clock().tick(120)
