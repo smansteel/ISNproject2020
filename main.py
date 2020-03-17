@@ -12,6 +12,7 @@ fenetre = pygame.display.set_mode(screensize, RESIZABLE)
 
 fond = pygame.image.load("fond.jpg").convert_alpha()
 white = Color(255,255,255)
+green = Color(255,0,0)
 
 def text_objects(text, font):
     textSurface = font.render(text, True, white)
