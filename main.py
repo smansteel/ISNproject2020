@@ -14,6 +14,7 @@ fenetre = pygame.display.set_mode(screensize, RESIZABLE)
 fond = pygame.image.load("fond.jpg").convert_alpha()
 white = Color(255,255,255)
 green = Color(255,0,0)
+u=0
 
 def text_objects(text, font):
     textSurface = font.render(text, True, white)
@@ -34,12 +35,14 @@ while continuer :
             continuer = False
             quit()
 
+
     fenetre.blit(fond, (0,0))
+    if event.type in (pygame.KEYDOWN, pygame.KEYUP):
+        key_name = pygame.key.name(event.key)
+        if pygame.key.get_focused() == True :
+            if event.type == pygame.KEYDOWN:
+                print('{}'.format(key_name))
 
-
-    for i in (0, screensize[1]):
-        message_display("salut",random.randint(20, screensize[0]), 10 )
-        time.sleep(0.5)
 
 
     pygame.time.Clock().tick(120)
