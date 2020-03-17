@@ -53,7 +53,7 @@ while continuer :
 
 
 
-    pygame.time.Clock().tick(120)
+    pygame.time.Clock().tick(60)
     pygame.display.update()
 
 
