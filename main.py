@@ -6,12 +6,12 @@ from pygame.locals import *
 
 i=200
 pygame.init()
-mots = {''}
+liste_mot = ['']
 pygame.key.set_repeat(100, 25)
 continuer = True
 screensize = (1280, 720)
 fenetre = pygame.display.set_mode(screensize, RESIZABLE)
-
+mot = [""]
 fond = pygame.image.load("fond.jpg").convert_alpha()
 white = Color(255,255,255)
 green = Color(255,0,0)
@@ -28,8 +28,13 @@ def message_display(text,a,b):
     fenetre.blit(TextSurf, TextRect)
 
 
+with open("words.txt", "r") as words:
+    for mots in words:
+        mot = "".join(mots.split("\n"))
+        liste_mot += mot
+
+print(liste_mot)
 while continuer :
-    if i== 200 :
 
     for event in pygame.event.get():
         if event.type == QUIT:
